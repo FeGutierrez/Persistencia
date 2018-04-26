@@ -28,7 +28,7 @@ public class Archivos {
     public static void main(String[] args) {
         
         File carpetaprueba = new File("carpeta prueba");
-        File carpeta2 = new File("carpeta2");
+        File carpeta2 = new File("carpeta/carpeta2");
         if (!carpetaprueba.exists()) {
             carpetaprueba.mkdir();
         } else {
@@ -47,9 +47,9 @@ public class Archivos {
                 System.out.println("Prohibido crear el archivo");
             }
         } else {
-//            System.out.println("Tamaño: "+ archivo.length() + " bytes");
-//            System.out.println("Ruta: " + archivo.getAbsolutePath());
-//            System.out.println("¿Es archivo?: " + archivo.isFile());
+//          System.out.println("Tamaño: "+ archivo.length() + " bytes");
+//          System.out.println("Ruta: " + archivo.getAbsolutePath());
+//          System.out.println("¿Es archivo?: " + archivo.isFile());
             if (carpeta2.isDirectory()) {
                 String[] lista = carpeta2.list();
                 System.out.println("Lista de archivos");
@@ -60,7 +60,7 @@ public class Archivos {
                 try {
                     Scanner lecturaArchivo = new Scanner(archivo);
                     while (lecturaArchivo.hasNextInt()) { 
-                        System.out.println(lecturaArchivo.nextInt());
+                        //System.out.println(lecturaArchivo.nextInt());
                        
                     }
                 } catch (FileNotFoundException ex) {
@@ -69,6 +69,7 @@ public class Archivos {
             }
         }
         
+        //Pendiente Hacer metodo de listado de todos los folders con su contenido
         
 
     }  
